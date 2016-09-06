@@ -33,9 +33,9 @@ class Marks extends \yii\db\ActiveRecord
         return [
             [['student_id'], 'required', 'message' => 'Student Name cannot be blank.'],
             [['student_id'], 'integer'],
-			['mark', 'each', 'rule' => ['number','max' => 100],'on' => 'create'],
+	    ['mark', 'each', 'rule' => ['number','max' => 100],'on' => 'create'],
             ['mark', 'each', 'rule' => ['required'],'on' => 'create'],
-			[['student_id'], 'unique','on' => 'create','message' => 'This Student mark has already been entered.'],
+	    [['student_id'], 'unique','on' => 'create','message' => 'This Student mark has already been entered.'],
             [['created_at', 'updated_at'], 'safe'],
             [['student_id'], 'exist', 'skipOnError' => true, 'targetClass' => Student::className(), 'targetAttribute' => ['student_id' => 'id']],
         ];
