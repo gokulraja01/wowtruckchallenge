@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<?php $this->head() ?>    
+    <?php $this->head() ?>    
     <!-- Bootstrap CSS -->    
     <link href="<?php echo Yii::$app->homeUrl;?>css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
@@ -22,10 +22,8 @@
   </head>
 
   <body class="login-img3-body">
-
     <div class="container">
-		<?php echo $content; ?>
+	<?php echo $content; ?>
     </div>
-
   </body>
 </html>
