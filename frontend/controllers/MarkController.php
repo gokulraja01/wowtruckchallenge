@@ -37,9 +37,9 @@ class MarkController extends Controller
     public function actionIndex()
     {
         if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
-		$model = Marks::find()->all();
+		return $this->redirect('site/login');
+	}
+	$model = Marks::find()->all();
         return $this->render('index', [
             'model' => $model,
         ]);
@@ -53,9 +53,9 @@ class MarkController extends Controller
     public function actionView($id)
     {
         if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
-		return $this->render('view', [
+		return $this->redirect('site/login');
+	}
+	return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
     }
@@ -68,18 +68,18 @@ class MarkController extends Controller
     public function actionCreate()
     {
         if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
-		$model = new Marks();
-		$model->scenario = 'create';
+		return $this->redirect('site/login');
+	}
+	$model = new Marks();
+	$model->scenario = 'create';
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-			$postdata = Yii::$app->request->post();
-			Yii::$app->db->createCommand()->insert('marks', [
-				'student_id' => $postdata['Marks']['student_id'],
-				'mark' => json_encode($postdata['Marks']['mark']),
-			])->execute();
-			Yii::$app->session->setFlash('success', 'Mark Entered Successfully');				
-			return $this->redirect(['index']);                                
+		$postdata = Yii::$app->request->post();
+		Yii::$app->db->createCommand()->insert('marks', [
+			'student_id' => $postdata['Marks']['student_id'],
+			'mark' => json_encode($postdata['Marks']['mark']),
+		])->execute();
+		Yii::$app->session->setFlash('success', 'Mark Entered Successfully');				
+		return $this->redirect(['index']);                                
         } else {					
             return $this->render('create', [
                 'model' => $model,				
@@ -96,17 +96,17 @@ class MarkController extends Controller
     public function actionUpdate($id)
     {
         if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
-				
-		$model = $this->findModel($id);
+		return $this->redirect('site/login');
+	}
+			
+	$model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
                 $postdata = Yii::$app->request->post();
-				$model->mark = json_encode($postdata['mark']);
-				$model->update();
-				Yii::$app->session->setFlash('success', 'Mark Updated Successfully');
-            return $this->redirect(['view', 'id' => $model->id]);
+		$model->mark = json_encode($postdata['mark']);
+		$model->update();
+		Yii::$app->session->setFlash('success', 'Mark Updated Successfully');
+		return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -123,10 +123,10 @@ class MarkController extends Controller
     public function actionDelete($id)
     {
         if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
-		$this->findModel($id)->delete();
-		Yii::$app->session->setFlash('success', 'Mark Deleted Successfully');
+		return $this->redirect('site/login');
+	}
+	$this->findModel($id)->delete();
+	Yii::$app->session->setFlash('success', 'Mark Deleted Successfully');
 
         return $this->redirect(['index']);
     }
