@@ -41,7 +41,7 @@ use yii\widgets\ActiveForm;
                               <?= $form->field($model, 'email')->textInput(['maxlength' => true,'class' => 'form-control'])->label(false); ?>
                           </div>                                  
                         </div>
-						<a href="<?php echo Yii::$app->homeUrl;?>student" class="btn btn-primary">Back</a>
+			<a href="<?php echo Yii::$app->homeUrl;?>student" class="btn btn-primary">Back</a>
                         <?= Html::submitButton($model->isNewRecord ? 'Add' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
                       
                   <?php ActiveForm::end(); ?>
