@@ -5,7 +5,7 @@
 		<div class="col-lg-12">
 			<h3 class="page-header"><i class="fa fa-user"></i> View Subject</h3>
 			<ol class="breadcrumb">
-				<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+				<li><i class="fa fa-home"></i><a href="#">Home</a></li>
 				<li><i class="fa fa-file-text-o"></i>Subjects</li>
 				<li><i class="fa fa-file-text-o"></i>View Subject</li>
 			</ol>
