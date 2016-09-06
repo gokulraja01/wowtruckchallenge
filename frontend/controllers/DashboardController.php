@@ -16,10 +16,11 @@ class DashboardController extends Controller
      */
     public function actionIndex()
     {	
-		if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
-		$student = Student::find()->all();
+	if (Yii::$app->user->isGuest) {
+		return $this->redirect('site/login');
+	}
+	
+	$student = Student::find()->all();
         $subject = Subject::find()->all();
         
         return $this->render('index', [
