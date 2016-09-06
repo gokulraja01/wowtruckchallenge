@@ -13,39 +13,39 @@
 	</div>
 	
 	<?php if(Yii::$app->session->getFlash('success')): ?>
-	<div class="alert alert-success fade in">
-	  <button data-dismiss="alert" class="close close-sm" type="button">
-		<i class="fa fa-times"></i>
-	  </button>
-	  <strong>Success!</strong> <?php echo Yii::$app->session->getFlash('success'); ?>
-	</div>
+		<div class="alert alert-success fade in">
+		  <button data-dismiss="alert" class="close close-sm" type="button">
+			<i class="fa fa-times"></i>
+		  </button>
+		  <strong>Success!</strong> <?php echo Yii::$app->session->getFlash('success'); ?>
+		</div>
 	<?php endif; ?>
 	
-	  <div class="row">
-		  <div class="col-lg-12">
-			  <section class="panel">
-				  <header class="panel-heading">                             
-				  </header>
-				  <div class="panel-body">
-					  <form class="form-horizontal " method="get">
-						   <div class="form-group">
-							  <label class="col-lg-2 control-label">Subject Name</label>
-							  <div class="col-lg-10">
-								  <p class="form-control-static"><?php echo $model->subject_name; ?></p>
-							  </div>
-						  </div>
-						  <div class="form-group">
-							  <label class="col-lg-2 control-label">Teacher Name</label>
-							  <div class="col-lg-10">
-								  <p class="form-control-static"><?php echo $model->teacher_name; ?></p>
-							  </div>
-						  </div>                                  
-						  <a href="<?php echo Yii::$app->homeUrl;?>subject" class="btn btn-primary">Back</a>
-					  </form>
+	<div class="row">
+		<div class="col-lg-12">
+			<section class="panel">
+				<header class="panel-heading">                             
+				</header>
+				<div class="panel-body">
+					<form class="form-horizontal " method="get">
+						<div class="form-group">
+							<label class="col-lg-2 control-label">Subject Name</label>
+							<div class="col-lg-10">
+								<p class="form-control-static"><?php echo $model->subject_name; ?></p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-lg-2 control-label">Teacher Name</label>
+							<div class="col-lg-10">
+								 <p class="form-control-static"><?php echo $model->teacher_name; ?></p>
+							</div>
+						</div>                                  
+						<a href="<?php echo Yii::$app->homeUrl;?>subject" class="btn btn-primary">Back</a>
+					</form>
 				  </div>
-			  </section>
-		  </div>
-	  </div>
+			</section>
+		</div>
+	</div>
 </section>
 </section>
 <!--main content end-->
