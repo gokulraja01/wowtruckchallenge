@@ -10,8 +10,8 @@ use yii\widgets\ActiveForm;
 
 <!--main content start-->
 <section id="main-content">
-  <section class="wrapper">
-	  <div class="row">
+  	<section class="wrapper">
+	  	<div class="row">
 			<div class="col-lg-12">
 				<h3 class="page-header"><i class="fa fa-file-text-o"></i> Update Subjects</h3>
 				<ol class="breadcrumb">
@@ -22,11 +22,11 @@ use yii\widgets\ActiveForm;
 			</div>
 		</div>
 		
-		  <?= $this->render('_form', [
+		<?= $this->render('_form', [
 			'model' => $model,
-		  ]) ?>
+		]) ?>
 	  
-</section>
+	</section>
 </section>
 <!--main content end-->
   
