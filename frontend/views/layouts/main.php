@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<?php $this->head() ?>    
+    <?php $this->head() ?>    
     <!-- Bootstrap CSS -->    
     <link href="<?php echo Yii::$app->homeUrl;?>css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
@@ -11,10 +11,10 @@
     <link href="<?php echo Yii::$app->homeUrl;?>css/elegant-icons-style.css" rel="stylesheet" />
     <link href="<?php echo Yii::$app->homeUrl;?>css/font-awesome.min.css" rel="stylesheet" />
     <!-- Custom styles -->	
-	<link href="<?php echo Yii::$app->homeUrl;?>css/widgets.css" rel="stylesheet">
+    <link href="<?php echo Yii::$app->homeUrl;?>css/widgets.css" rel="stylesheet">
     <link href="<?php echo Yii::$app->homeUrl;?>css/style.css" rel="stylesheet">
     <link href="<?php echo Yii::$app->homeUrl;?>css/style-responsive.css" rel="stylesheet" />	
-	<link href="<?php echo Yii::$app->homeUrl;?>css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="<?php echo Yii::$app->homeUrl;?>css/jquery-ui-1.10.4.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -54,7 +54,6 @@
                             <li>
                                 <a href="<?php echo Yii::$app->homeUrl;?>site/logout"><i class="icon_key_alt"></i> Log Out</a>
                             </li>
-                            
                         </ul>
                     </li>
                     <!-- user login dropdown end -->
@@ -75,40 +74,36 @@
                           <span>Dashboard</span>
                       </a>
                   </li>
-				  <li class="<?php if(Yii::$app->controller->id == 'student') echo "active"; ?>">
+		  <li class="<?php if(Yii::$app->controller->id == 'student') echo "active"; ?>">
                       <a class="" href="<?php echo Yii::$app->homeUrl;?>student">
                           <i class="fa fa-users"></i>
                           <span>Students</span>
                       </a>
                   </li>
-				  <li class="<?php if(Yii::$app->controller->id == 'subject') echo "active"; ?>">
+		  <li class="<?php if(Yii::$app->controller->id == 'subject') echo "active"; ?>">
                       <a class="" href="<?php echo Yii::$app->homeUrl;?>subject">
                           <i class="fa fa-file-text-o"></i>
                           <span>Subjects</span>
                       </a>
                   </li>
-				  <li class="<?php if(Yii::$app->controller->id == 'mark') echo "active"; ?>">
+		  <li class="<?php if(Yii::$app->controller->id == 'mark') echo "active"; ?>">
                       <a class="" href="<?php echo Yii::$app->homeUrl;?>mark">
                           <i class="fa fa-table"></i>
                           <span>Marks</span>
                       </a>
                   </li>
-				  
-                  
               </ul>
               <!-- sidebar menu end-->
           </div>
       </aside>
       <!--sidebar end-->
-	  
-      	<?php echo $content; ?>	  	
-     
+      	<?php echo $content; ?>
   </section>
   <!-- container section start -->
 
     <!-- javascripts -->
     <script src="<?php echo Yii::$app->homeUrl;?>js/jquery.js"></script>
-	<script src="<?php echo Yii::$app->homeUrl;?>js/jquery-ui-1.10.4.min.js"></script>
+    <script src="<?php echo Yii::$app->homeUrl;?>js/jquery-ui-1.10.4.min.js"></script>
     <script src="<?php echo Yii::$app->homeUrl;?>js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="<?php echo Yii::$app->homeUrl;?>js/jquery-ui-1.9.2.custom.min.js"></script>
     <!-- bootstrap -->
@@ -120,11 +115,11 @@
     <!--custome script for all page-->
     <script src="<?php echo Yii::$app->homeUrl;?>js/scripts.js"></script>
     <!-- custom script for this page-->   
-	<script src="<?php echo Yii::$app->homeUrl;?>js/jquery.autosize.min.js"></script>
-	<script src="<?php echo Yii::$app->homeUrl;?>js/jquery.placeholder.min.js"></script>    
+    <script src="<?php echo Yii::$app->homeUrl;?>js/jquery.autosize.min.js"></script>
+    <script src="<?php echo Yii::$app->homeUrl;?>js/jquery.placeholder.min.js"></script>    
     <script src="<?php echo Yii::$app->homeUrl;?>js/jquery.dataTables.min.js"></script>
     <script src="<?php echo Yii::$app->homeUrl;?>js/dataTables.bootstrap.min.js"></script>   
-	<script>    
+   <script>    
     $(document).ready(function() {
         $('#example').DataTable();
     });
