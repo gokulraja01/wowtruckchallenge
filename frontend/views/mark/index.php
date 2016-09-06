@@ -7,10 +7,10 @@ use app\models\Student;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 <!--main content start-->
-  <section id="main-content">
-	  <section class="wrapper">            
-		  <!--overview start-->
-		  <div class="row">
+<section id="main-content">
+	<section class="wrapper">            
+		<!--overview start-->
+		<div class="row">
 			<div class="col-lg-12">
 				<h3 class="page-header"><i class="fa fa-table"></i> Marks</h3>
 				<ol class="breadcrumb">
@@ -21,12 +21,12 @@ use app\models\Student;
 		</div>
 		
 		<?php if(Yii::$app->session->getFlash('success')): ?>
-		<div class="alert alert-success fade in">
-		  <button data-dismiss="alert" class="close close-sm" type="button">
-			<i class="fa fa-times"></i>
-		  </button>
-		  <strong>Success!</strong> <?php echo Yii::$app->session->getFlash('success'); ?>
-		</div>
+			<div class="alert alert-success fade in">
+			  <button data-dismiss="alert" class="close close-sm" type="button">
+				<i class="fa fa-times"></i>
+			  </button>
+			  <strong>Success!</strong> <?php echo Yii::$app->session->getFlash('success'); ?>
+			</div>
 		<?php endif; ?>
 		
 		<div class="row">
@@ -35,16 +35,16 @@ use app\models\Student;
 			</div>
 		</div>
 		<div class="row">				
-			  <div class="col-lg-12">
-				  <section class="panel">
-					  <div class="table-responsive">
+			<div class="col-lg-12">
+				<section class="panel">
+					<div class="table-responsive">
 						<table class="table" id="example">
 						  <thead>
 							<tr>
 							  <th>#</th>
 							  <th>Student Name</th>
 							  <?php $subject = Subject::find()->all();								 
-									foreach($subject as $subject): ?>
+							  foreach($subject as $subject): ?>
 										<th><?php echo $subject['subject_name']; ?></th>
 							  <?php endforeach; ?>
 							  <th>Action</th>								  
@@ -72,14 +72,14 @@ use app\models\Student;
 								onclick='return confirm("Are you sure you want to delete this item?")' data-method="post">
 									<span class="fa fa-trash-o"></span>
 								</a>
-								</td>								  
+							    </td>								  
 							</tr>
 							<?php $i++; endforeach; ?>
 						  </tbody>
 						</table>
-					  </div>
-					</section>
-				</div>
+					</div>
+				</section>
 			</div>
-  </section>
+		</div>
+  	</section>
 </section>
