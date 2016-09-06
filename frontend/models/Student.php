@@ -31,9 +31,9 @@ class Student extends \yii\db\ActiveRecord
         return [
             [['student_name', 'father_name', 'email'], 'required'],
             ['student_name', 'unique', 'message' => 'This Studentname has already been taken.'],
-			['student_name', 'string'],
+	    ['student_name', 'string'],
             ['email', 'unique', 'message' => 'This Studentemail has already been taken.'],
-			['email', 'email'],
+	    ['email', 'email'],
             [['created_at'], 'safe'],
             [['student_name', 'father_name', 'email'], 'string', 'max' => 255],
         ];
