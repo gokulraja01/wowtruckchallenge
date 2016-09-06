@@ -36,10 +36,10 @@ class StudentController extends Controller
     public function actionIndex()
     {
         if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
+		return $this->redirect('site/login');
+	}
 		
-		$model = Student::find()->all();	
+	$model = Student::find()->all();	
 
         return $this->render('index', [
             'model' => $model,
@@ -54,10 +54,10 @@ class StudentController extends Controller
     public function actionView($id)
     {
         if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
+		return $this->redirect('site/login');
+	}
 		
-		return $this->render('view', [
+	return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
     }
@@ -70,13 +70,13 @@ class StudentController extends Controller
     public function actionCreate()
     {
         if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
-		$model = new Student();
+		return $this->redirect('site/login');
+	}
+	$model = new Student();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			Yii::$app->session->setFlash('success', 'Student Added Successfully');
-            return $this->redirect(['view', 'id' => $model->id]);
+		 Yii::$app->session->setFlash('success', 'Student Added Successfully');
+        	 return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -93,14 +93,14 @@ class StudentController extends Controller
     public function actionUpdate($id)
     {
         if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
+		return $this->redirect('site/login');
+	}
 		
-		$model = $this->findModel($id);
+	$model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			Yii::$app->session->setFlash('success', 'Student Updated Successfully');
-            return $this->redirect(['view', 'id' => $model->id]);
+		Yii::$app->session->setFlash('success', 'Student Updated Successfully');
+            	return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -117,11 +117,11 @@ class StudentController extends Controller
     public function actionDelete($id)
     {
         if (Yii::$app->user->isGuest) {
-			return $this->redirect('site/login');
-		}
+		return $this->redirect('site/login');
+	}
 		
-		$this->findModel($id)->delete();
-		Yii::$app->session->setFlash('success', 'Student Deleted Successfully');
+	$this->findModel($id)->delete();
+	Yii::$app->session->setFlash('success', 'Student Deleted Successfully');
         return $this->redirect(['index']);
     }
 
