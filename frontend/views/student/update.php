@@ -9,24 +9,24 @@ use yii\widgets\ActiveForm;
 ?>
 
 <!--main content start-->
-      <section id="main-content">
-          <section class="wrapper">
-		  <div class="row">
-				<div class="col-lg-12">
-					<h3 class="page-header"><i class="fa fa-user"></i> Update Students</h3>
-					<ol class="breadcrumb">
-						<li><i class="fa fa-home"></i><a href="#">Home</a></li>
-						<li><i class="fa fa-users"></i>Students</li>
-						<li><i class="fa fa-user"></i>Update Student</li>
-					</ol>
-				</div>
+<section id="main-content">
+	<section class="wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<h3 class="page-header"><i class="fa fa-user"></i> Update Students</h3>
+				<ol class="breadcrumb">
+					<li><i class="fa fa-home"></i><a href="#">Home</a></li>
+					<li><i class="fa fa-users"></i>Students</li>
+					<li><i class="fa fa-user"></i>Update Student</li>
+				</ol>
 			</div>
-            
-              <?= $this->render('_form', [
-                'model' => $model,
-              ]) ?>
-              
-    </section>
-   </section>
-      <!--main content end-->
+		</div>
+	    
+	      <?= $this->render('_form', [
+	        'model' => $model,
+	      ]) ?>
+	      
+	</section>
+</section>
+<!--main content end-->
   
